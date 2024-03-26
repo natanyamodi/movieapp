@@ -1,0 +1,153 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+
+}
+
+.login-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 50px; /* Increased padding */
+	padding-right: 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgb(131, 2, 2), 0 0 20px rgb(131, 2, 2), 0 0 30px rgb(131, 2, 2);
+  }
+  100% {
+    box-shadow: 0 0 20px rgb(131, 2, 2), 0 0 30px rgb(131, 2, 2), 0 0 40px rgb(131, 2, 2);
+  }
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+	
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+	
+}
+
+.form-group input:focus {
+  outline: none;
+}
+
+.error {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  background-color: rgb(131, 2, 2);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Added margin-top */
+	
+}
+
+button:hover {
+  background-color: white;
+	color: rgb(131, 2, 2);
+	font-weight: 900;
+}
+
+.create-account-link {
+  color: #fff;
+  margin-top: 20px; /* Adjusted margin-top */
+}
+
+.create-account-link a {
+  color: rgb(131, 2, 2);
+  text-decoration: none;
+}
+
+.login-link a {
+  text-decoration: none; /* Remove underline from the link */
+  color: rgb(131, 2, 2); /* Preserve the default text color */
+}
+
+/* ./CSS/Login.css */
+
+/* Genres Container */
+
+.genres-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Genre Label */
+.genres-container label {
+  background-color: white;
+  color: rgb(131, 2, 2);
+	font-weight: bolder;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1 0 20%; /* Ensure each genre takes up equal space with 5 genres per row */
+  max-width: calc(20% - 10px); /* Subtracting margin to prevent overflow */
+  text-align: center;
+	margin: 40px;
+}
+
+.genres-container label:hover {
+  background-color: rgb(131, 2, 2);
+	color: white;
+}
+
+/* Get Recommendations Button */
+#get-recommendations-button {
+  padding: 10px 20px;
+  margin-top: 30px; /* Add margin to separate button from genres */
+
+}
+
+/* Movie Cards Container */
+.movies-items {
+  margin-top: 20px; /* Add margin to separate movies from genres */
+}
+
+/* Movie Card */
+.movie-card {
+  text-align: center;
+}
+
+.movie-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.movie-title {
+  margin-bottom: 5px;
+}
+
+.movie-rating {
+  color: #e4ff1a;
+}
+
+.movie-release-date {
+  display: block;
+}
