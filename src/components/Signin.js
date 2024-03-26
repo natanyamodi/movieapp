@@ -47,7 +47,7 @@ const SignUp = ({ onSignUp }) => {
           <button type="submit">Create Account</button>
         </form>
         <p className="login-link">
-          Already have an account? <Link to="/login">Login Here</Link>
+          Already have an account? <Link to="/">Login Here</Link>
         </p>
       </div>
     </div>

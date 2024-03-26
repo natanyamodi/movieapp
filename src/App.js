@@ -3,9 +3,10 @@ import "./App.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import SignUp from "./components/Signin";
 import Loader from "./components/Loader";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { MovieProvider, useMovieContext } from "./components/MovieContext";
 import Logout from "./components/Logout";
+
 const Navbar = lazy(() => import("./components/Navbar"));
 const MovieFilter = lazy(() => import("./components/MovieFilter"));
 const MovieBanner = lazy(() => import("./components/MovieBanner"));
@@ -96,7 +97,16 @@ function App() {
 
 							<div className="container">
 								<Routes>
-									<Route path="/login" element={<Login onLogin={handleLogin} />} />
+								<Route
+                path="/"
+                element={
+                  loggedIn === "true" ? (
+                    <Navigate to="/main" replace />
+                  ) : (
+                    <Login onLogin={handleLogin} />
+                  )
+                }
+								/>
                   <Route path="/signup" element={<SignUp onSignUp={handleSignUp} />} />
 									<Route path="/trynew" element={<TryNew />} />  
 									<Route

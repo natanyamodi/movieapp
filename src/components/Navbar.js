@@ -29,7 +29,7 @@ export default function Navbar(props) {
 							<h1 id="iFlixName">Movies</h1>
 						</div>
 					</Link>
-					<Link className="Link" to="/trynew">Try New</Link>
+					<Link className="Link try-new-btn" to="/trynew">Try New</Link>
 				</div>
 			</div>
 		</>

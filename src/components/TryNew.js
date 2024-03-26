@@ -112,10 +112,18 @@ const TryNew = () => {
 			checked: false,
 			name: "Western",
 		},
-  ]);
+  ])
   const [recommendedMovies, setRecommendedMovies] = useState([]);
   const navigate = useNavigate();
-
+  useEffect(() => {
+    if (loggedIn === "false") {
+      // If not logged in, navigate to login page
+      navigate("/");
+    } else {
+      // Fetch genres and other data
+      fetchGenres();
+    }
+  }, [loggedIn, navigate]);
   var settings = {
     dots: true,
     infinite: true,

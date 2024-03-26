@@ -49,3 +49,36 @@ li {
 .sticky {
   top: -5rem;
 }
+
+.try-new-btn {
+  background-color: rgba(128, 128, 128, 0.5); /* Grayish translucent background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: auto; /* Aligns the button to the right */
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  background: linear-gradient(45deg, #ff0000, #ffff00, #00ff00, #0000ff, #ff00ff);
+  background-size: 200% 200%;
+  color: transparent;
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: glow 4s linear infinite;
+  animation: glow 4s linear infinite;
+  font-size:x-large;
+}
+
+
+@keyframes glow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
